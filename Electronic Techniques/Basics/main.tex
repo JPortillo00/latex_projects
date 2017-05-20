@@ -1,0 +1,206 @@
+%=====================================================
+%====== If you are new to LaTeX, this website ========
+%======     will be your new best friend:     ========
+%======   http://en.wikibooks.org/wiki/LaTeX  ========
+%======   Template created by Jonathan Blair  ========
+%=====================================================
+
+
+
+%=====================================================
+%============ Controls ===============================
+%=====================================================
+
+%\documentclass[12pt,letterpaper,onecolumn]{article}
+\documentclass[11pt,letterpaper,onecolumn]{article}
+%\documentclass[10pt,letterpaper,onecolumn]{article}  % not recommended
+%\documentclass[12pt,letterpaper,twocolumn]{article}
+%\documentclass[11pt,letterpaper,twocolumn]{article}
+%\documentclass[10pt,letterpaper,twocolumn]{article}
+
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{textgreek}
+\usepackage{float}
+\usepackage{booktabs}
+%\graphicspath{{path-to-folder-containing-necessary-graphics}{other folder as necessary}}
+
+
+%=====================================================
+%============ \begin{document} =======================
+%=====================================================
+
+\begin{document}
+
+%=====================================================
+%============ Title ==================================
+%=====================================================
+
+\title{\bf Oscilliscope, Signal Generator and Digital Multimeter Basics}
+%\title{\Large\bf Larger, Bolded Title}
+
+%=====================================================
+%============ Author =================================
+%=====================================================
+\author{
+ Jairo Portillo \\*
+  \\*
+ PHY 338K Electronic Techniques \\*
+ Department of Physics \\*
+ The University of Texas at Austin \\*
+ Austin, TX 78712, USA
+}
+\date{January 28, 2016}
+
+%\address{The University of Texas, Austin, Texas, 78712}
+
+\maketitle
+
+%=====================================================
+%============ Abstract ===============================
+%=====================================================
+
+\begin{abstract}
+
+In this lab, we were to develop the basic skills needed in order to use an oscilloscope, signal generator, and digital multimeter in order to prepare for future labs. With these pieces of equipment we were to measure voltages, currents, and waveform parameters with the multimeter and oscilloscope, respectively.   
+\end{abstract}
+
+%=====================================================
+%============ Body of the article ==========================
+%=====================================================
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Preperation}
+
+The ability to measure currents, voltages, and wave parameters can be critical in working with circuits. In order to become familiar with the oscilloscope beforehand a document with the basic functions of the front panel was reviewed for a previous generation oscilloscope compared to those currently in the lab as they have been updated. The signal generator will be connected to the oscilloscope through BNC cables. The signal generator allows control of the amplitude and frequency of the signal it creates. This will give us a signal to be analyzed with the oscilloscope and multimeter.     
+
+\section{Labwork}
+
+
+\subsection{Apparatus}
+
+Our apparatus was simply a signal generator connected with a Tee and BNC to the oscilloscope. The Tee allowed and extra opening for loads that we would us later on. The TTL output of the signal generator would be connected to the external trigger slot of the scope. The BNC leading to the scope would be alternated between the scope and the multimeter with a BNC/banana jack.
+
+
+%=====================================================
+%============ Importing pictures  ==========================
+%=====================================================
+
+% !! To be imported, all graphics must be converted !!
+% !!    to encapsulated postscript (.eps format)    !!
+% !!  The GNU Image Manipulation Program (GIMP) is  !!
+% !!          capable of this conversion.           !!
+
+
+
+\subsection{Data Collection}
+
+The first portion of the lab, Part A: Oscilloscope Basics, was simply getting familiar with the basic functions of the oscilloscope. The signal generator was set to a 1KHz triangle wave. During this portion, we observed the importance of triggering and its effects on the scope's ability to read a signal. When the signal was below the internal trigger level the signal would fluctuate chaotically or disappear. When the external trigger was connected from the signal generator's TTL the signal always remained stable on the scope's display.
+
+The second portion, Part B: DMM Basics, focused on how to use the digital multimeter and how its measurements would compare to those from the oscilloscope. Using the Tee both the scope and DMM would be connected to the output of the generator. The scope was set to ground to establish the zero voltage for the system though the DMM did not read zero. This could be due to the capacitor within the scope. We then measured a DC offset sine wave with AC and DC coupling. For AC coupling, when the DC offset was increased the DC voltage increased but the AC reading remained constant. On the oscilloscope the wave would jitter then return to its previous form. For DC coupling, the DC voltage and amplitude of the wave on the scope simply increased as the DC offset increased. We also measured the resistance of four resistors
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+1st Digit & 2nd Digit & Multiplier & Tolerance & Reliability & DMM Reading\\ \hline
+ Red & Purple & Black & Silver & Orange & \\
+ 2 & 7 & 1 & $\pm10\%$ & $0.01\%$ & 34.7 \Omega\\ \hline
+ Green & Brown & Black & No Band & Red & \\
+ 5 & 1 & 1 & $\pm20\%$ & $0.1\%$ & 51 \Omega\\ \hline
+ Green & Blue & Yellow & Silver & Orange & \\
+ 5 & 6 & 10000 & $\pm10\%$ & $0.01\%$ & 0.521 M\Omega\\ \hline
+ Red & Red & Orange & Silver & Orange & \\
+ 2 & 2 & 1000 & $\pm10\%$ & $0.01\%$ & 21.2 k\Omega\\ \hline
+ 
+ \hline
+\end{tabular}
+\caption{Our data for the resistors we measured.}
+\label{tab:data}
+\end{table}
+%===================================================
+%============ Section ==================================
+%=====================================================
+
+We were then tasked with measuring the rms voltage for a 10 volt 1 kHz sine, square, and triangle wave with the scope and DMM. We were then to compare the measurements. The error in all our voltage measurements is $\pm0.005$. In order to calculated the expected rms voltage we used the following formula
+$$V_{\frac{1}{2}\text{Wave Average}}\times \text{Form Factor} = V_{rms}$$
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+ \hline
+ Wave & Half Wave & Form & Expected & DMM  & Scope \\
+ Type & Average & Factor & (V) & Reading (V) & Reading (V)\\ \hline
+ Sqaure & 10 & 1.00 & 10 & 11.07 & 10 \\
+ Sine & 3.18 & 1.11 & 7.07 & 7.07 & 7.17\\
+Triangle & 5 & 1.15 & 5.75 & 5.45 & 5.77 \\
+ \hline
+ 
+\end{tabular}
+\caption{RMS Voltages for various wave types}
+\label{tab:vtl}
+\end{table}
+
+For the final portion, Part C: Signal Generator Basics, we were to find the output impedance of the signal generator, measure and compare the frequencies of the signals, and measure the rise and fall time of a square wave. In order to find the output impedance, we used parallel circuit rules and used the following equation
+$$(V_{peak} - V_R)\frac{R}{V_R}=Z_0$$
+where $V_{peak}$ is the peak voltage before the load R is added, $V_R$ is the peak voltage after the load is added, R is the load,$\frac{R}{V_R}$ is the inverse of the current after the load is added, and $Z_0$ is the output impedance. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+ \hline
+ Load (\Omega) & $V_{peak}$ & $V_R$ & $Z_0$ \\ \hline
+ 50 & $6.64\pm0.0005$ & $3.39\pm0.005$ & $47.94\pm0.13$\\
+ 75 & $6.8\pm0.05$ & $4.5\pm0.05$ & $35.78\pm1.17$ \\
+ 100 & $6.8\pm0.05$ & $4.03\pm0.005$ & $68.73\pm1.96$\\
+ 
+ \hline
+\end{tabular}
+\caption{Different loads and calculated output Impedance}
+\label{tab:load}
+\end{table}
+
+From this we can calculate that the output impedance is $50.82\pm2.29\Omega$ on average. we then tested the accuracy of the frequencies of the signal generator. 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
+ \hline
+ Generator Frequency & Oscilloscope Frequency & Cursor Frequency \\ \hline
+ 10 Hz & 9.823 Hz & 9.804 Hz\\
+ 100 Hz & 99 Hz & 99.01 Hz \\
+ 1 kHz & 1.012 kHz & 1 kHz\\
+ 100 kHz & 99.83 kHz & 98.03 kHz\\
+ \hline
+\end{tabular}
+\caption{Comparison of expected and measured frequencies}
+\label{tab:freq}
+\end{table}
+
+The rise and fall time for a 1 MHz, 10 Volt square wave is 39 ns and 51 ns respectively. 
+
+\section{Summary and conclusions}
+
+In this lab, we not only learned the basics of an oscilloscope, digital multimeter, and signal generator, we also observed how the measurements of different equipments. It was observed that the DMM can only accurately measure the rms voltage of the sine wave. This is likely due to the fact the DMM lacks a micro processor so it cannot accurately integrate and calculate the rms voltage of square and triangle waves. It must find the average voltage and multiply it by some given form factor. The output impedance of the generator was found to be $50.82\pm2.29\Omega$. This could have been found more accurately with more measurements. We also found that the signal generator was was accurate to about $2\%$ when giving signals of certian frequencies.
+
+
+%=====================================================
+%============ Bibliography  ==============================
+%=====================================================
+
+
+
+%=====================================================
+%============ End ====================================
+%=====================================================
+
+\end{document}
+
+%=====================================================
+%============ End ====================================
+%=====================================================
