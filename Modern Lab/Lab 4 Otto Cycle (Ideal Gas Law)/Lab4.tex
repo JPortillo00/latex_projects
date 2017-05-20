@@ -1,0 +1,252 @@
+%=====================================================
+%====== If you are new to LaTeX, this website ========
+%======     will be your new best friend:     ========
+%======   http://en.wikibooks.org/wiki/LaTeX  ========
+%======   Template created by Jonathan Blair  ========
+%=====================================================
+
+
+
+%=====================================================
+%============ Controls ===============================
+%=====================================================
+
+%\documentclass[12pt,letterpaper,onecolumn]{article}
+\documentclass[11pt,letterpaper,onecolumn]{article}
+%\documentclass[10pt,letterpaper,onecolumn]{article}  % not recommended
+%\documentclass[12pt,letterpaper,twocolumn]{article}
+%\documentclass[11pt,letterpaper,twocolumn]{article}
+%\documentclass[10pt,letterpaper,twocolumn]{article}
+
+
+%\usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{textgreek}
+\usepackage{float}
+%\graphicspath{{path-to-folder-containing-necessary-graphics}{other folder as necessary}}
+
+
+%=====================================================
+%============ \begin{document} =======================
+%=====================================================
+
+\begin{document}
+
+%=====================================================
+%============ Title ==================================
+%=====================================================
+
+\title{\bf Measuring the efficiency of the Otto Cycle for an Ideal Gas}
+%\title{\Large\bf Larger, Bolded Title}
+
+%=====================================================
+%============ Author =================================
+%=====================================================
+\author{
+ Jairo Portillo \\*
+  \\*
+ PHY 353L Modern Laboratory \\*
+ Department of Physics \\*
+ The University of Texas at Austin \\*
+ Austin, TX 78712, USA
+}
+\date{November 9, 2015}
+
+%\address{The University of Texas, Austin, Texas, 78712}
+
+\maketitle
+
+%=====================================================
+%============ Abstract ===============================
+%=====================================================
+
+\begin{abstract}
+
+Using the Adiabatic Gas Law unit, we were able to attempt to recreate the ideal Otto cycle. Our measurements will be compared with the calculated efficiency of the ideal Otto cycle of the unit for air, Argon, and Carbon Dioxide. For air, we found the efficiency to be $0.183\pm0.232$ which is 118\% off the calculated value of $(8437\pm9.502)\times10^{-5}$. For Argon, the efficiency was $0.292\pm0.201$ which is 14\% off the calculated value of $(3400\pm3.8)\times10^{-4}$. For Carbon Dioxide, we found the efficiency to be $0.147\pm0.191$ which is 15\% off of the calculated value of $(1720\pm1.94)\times10^{-4}$.
+
+
+\end{abstract}
+
+%=====================================================
+%============ Body of the article ==========================
+%=====================================================
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Introduction}
+
+\subsection{Physics Motivation}
+
+  In 1876, Nikolaus August Otto has developed and built a four stroke internal combustion engine. He used the four stroke cycle patented by Alphonse Beau de Rochas but since he was the first to build the engine, it be came known as the Otto Cycle. The Otto cycle is a thermodynamic cycle that is the basis of four stroke gasoline engines. The Otto cycle is an idealized cycle as it assumes that the gas used is an ideal gas, there is no friction, and there is no loss of heat through the cylinder walls. An ideal gas is typically used to calculate the behavior of a gas by treating it as a point mass and its collisions as elastic, neglecting any other molecular forces involved in the collision. This make calculations for the cycle simpler as we neglect these factors.~\cite{Brit,Nave}
+
+\subsection{Theoretical background}
+
+\begin{figure}[H]
+\centering
+\includegraphics*[scale = 1]{Otto.png}
+\caption{The Otto cycle}
+\label{fig:sample}
+\end{figure}
+
+From 4 to 1 in Fig~\ref{fig:sample}. is the intake stroke in which gas is drawn into the chamber. From 1 to 2 in Fig~\ref{fig:sample}. is where the gas is heated at a constant volume. At 2 to 3 in Fig~\ref{fig:sample} is the power stroke, where the adiabatically expanding gas does work on the piston. From 3 to 4 Fig~\ref{fig:sample} is where the gas is released and the pressure drops to it lowest possible level. From point 1 to 2, the gas is heated during combustion and from point 3 to 4 heat is rejected therefore cooling the gas.
+
+The efficiency of the system can be determined 
+$$\eta=\frac{\mbox{work}}{\mbox{heat input}}=\frac{W_{on}-W_{by}}{W_{on}}$$
+where $W_{on}$ is the work done on the gas, and $W_{by}$ is the work done by the piston. The efficiency of the Ideal Otto Cycle is
+$$\eta_{Otto}=1 - \frac{1}{r^{\gamma-1}}$$
+where r is the compression ratio $\frac{V_{max}}{V_{min}}$, and $\gamma$ is the ration of the specific heats at constant pressure and constant volumes which is the same as the degrees of freedom of the gas. The efficiency will show how much frictions and heat loss actually influence the system.~\cite{kw}
+
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Our Approach \& Experimental setup}
+
+\subsection{Apparatus}
+
+
+%=====================================================
+%============ Importing pictures  ==========================
+%=====================================================
+
+% !! To be imported, all graphics must be converted !!
+% !!    to encapsulated postscript (.eps format)    !!
+% !!  The GNU Image Manipulation Program (GIMP) is  !!
+% !!          capable of this conversion.           !!
+
+\begin{figure}[H]
+  %
+  % placement specifier = { h,t,b,p,!,H }
+  % see the following url for placement specifier definitions:
+  % http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+  %
+ \begin{center}
+ \includegraphics*[scale = 1.2]{Apperatus.png}
+ \caption{Schematic for Photoelectric effect\label{fig:app} }
+ % See http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+ %  for information on labels.
+ \end{center}
+\end{figure}
+
+In this experiment, we will use the Adiabatic Gas Law unit to compress and expand the gas as well as to record data. The unit is able to measure pressure, temperature, and volume. It is connected to the computer in order to record data. The unit's chamber has two valves in order to flush and fill it with gas. The piston has a max height of 12.2 cm and a minimum height of 6.5 cm. In order to fill the chamber with Argon or Carbon Dioxide, the desired tank would be connected to the chamber through one valve and the other left open to let the air out. This allowed us to run cycles with the other gases. The lever has boundaries in order to protect the pressure and temperature sensor from being crushed by the piston.
+
+
+\subsection{Data Collection}
+
+\begin{figure}[H]
+  %
+  % placement specifier = { h,t,b,p,!,H }
+  % see the following url for placement specifier definitions:
+  % http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+  %
+ \begin{center}
+ \includegraphics*[scale = .6]{Otto.pdf}
+ \caption{An example of what out data looked like. This is the plot of carbon dioxide for multiple trials.\label{fig:CO2} }
+ % See http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+ %  for information on labels.
+ \end{center}
+\end{figure}
+ 
+
+ To record data we used the program Capstone to plot pressure against volume. Capstone was set to 1KHz for data collection, thus giving tens of thousands of data points. In order to maintain consistency the piston had to be raised at the same height each time and speed. This was done by simultaneously having a plot of pressure and time in order to observe the behavior of the pressure. The compressions and expansions had to be done rapidly to maintain adiabatic conditions. However, if we were not careful the lever would hit the pin and cause a jump in our data. This was corrected by simply trial and error. The chamber of the unit also has some noted damage at the bottom portions as if the piston would fall below the minimum height it would get stuck in the chamber. This can be seen from previous users and the chamber has a dent of where the piston had been stuck. The intial data was in voltages and had to be converted with these conversions given by the unit,
+ $$P(V_p)=100V_p (KPa)$$
+ for pressure and,
+ $$V(V_v)=3.19\times10^{-5}V_v+8.22\times10^{-5} (m^3)$$
+ for Volume.
+ 
+ 
+ 
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+
+\section{Data Analysis and Results}
+
+\subsection{Data Processing and Analysis}
+
+For each of the gases, we took 4 sets of data. With the 4 data sets, we found average points and used that to find the respective errors for out measurements.   
+The error in out pressure measurements were $\pm21.023$ KPa and for volume was $\pm2.0633\times10^{-5} m^3$. The compression ratio we found to be $1.877\pm0.0151$.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+ \hline
+ Gas & $\gamma$  & Ideal & Calculated \\
+ & (degrees of freedom) & Efficiency$(\eta_{Otto})$ & Efficiency $(\eta)$ \\ \hline
+ Air & 1.14 & $0.0844\pm(9.5\times10^{-5})$ & $0.184\pm0.232$ \\
+ Argon & 1.66 & $0.34\pm(3.83\times10^{-4})$ & $0.292\pm0.2$ \\
+ Carbon Dioxide & 1.30 & $0.172\pm(1.94\times10^{-4})$ & $0.147\pm0.191$ \\
+ \hline
+
+\end{tabular}
+\caption{Gases and their respective values}
+\label{tab:data}
+\end{table}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics*[scale = .6]{OttoErr.pdf}
+\caption{Plot of one the runs with error bars.~\label{fig:results} }
+\end{center}
+\end{figure}
+
+In order to find $W_{on}$ and $W_{by}$, we had to integrate both curves. The boundaries of where the volume becomes constant were found and the curves were fit with polynomials to the 10th order to increase accuracy. The polynomial was then numerically integrated to find the both work values. A 10th order polynomial was used as adding any more order did not change the values of the work done. With the thousands of points collected the error in the integration calculation came to be $\pm2.2\times10^{-3}$. This method was used as numerically integrating the data directly lead to discrepancies due to repeats in the data. This discrepancies appeared due to not being faster with the compression and the expansion. We also used this method as we overlooked that Capstone could integrate the data for you.
+
+As seen from Fig~\ref{fig:results}, the error in our measurements was large and could have been reduced with more trials. However looking over the Capstone feature was  set back as finding an effective method to find the work was arduous. Implementing the trapezoid rule to the fit was efficient due to the thousands of data points gathered thus giving a small error in the computations which did not influence the error in the work values. 
+
+
+\subsection{Results and Brief Discussion}
+
+Based on our data in Table~\ref{tab:data}, We can see that from our data that the Otto Cycle was most efficient for Argon as expected based on the ideal values. We found that the efficiency of the Otto cycle for air to be $0.184\pm0.232$ which was 118\% off of the ideal efficiency.For Argon, the efficiency was $0.292\pm0.201$ which is 14\% off the calculated value of $(3400\pm3.8)\times10^{-4}$. For Carbon Dioxide, we found the efficiency to be $0.147\pm0.191$ which is 15\% off of the calculated value of $(1720\pm1.94)\times10^{-4}$. Our data did not match the pattern predicted by the ideal efficiency, as carbon dioxide was less efficient than air thought ideally it is the opposite. But is can be seen in Fig~\ref{fig:CO2} that one of the runs was inconsistent. This was due to experimenter error and the apparatus was manually operated, but this was accounted for as seen by the large errors. 
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Summary and conclusions}
+
+Our values of efficiency for for air to be $0.184\pm0.232$ which was 118\% off of the ideal efficiency;for Argon, the efficiency was $0.292\pm0.201$ which is 14\% off the calculated value of $(3400\pm3.8)\times10^{-4}$;for Carbon Dioxide, we found the efficiency to be $0.147\pm0.191$ which is 15\% off of the calculated value of $(1720\pm1.94)\times10^{-4}$. We observed how various gases behave in the Otto Cycle and how similar their behavior is to ideal gases.
+
+%=====================================================
+%============ Bibliography  ==============================
+%=====================================================
+
+\begin{thebibliography}{9}
+
+\bibitem{Gibbs}
+Keith Gibbs, ''Schoolphysics: Degrees of freedom," Retrieved 11/3/2015.
+\url{http://www.schoolphysics.co.uk/age16-19/Thermal\%20physics/Kinetic\%20theory\%20of\%20matter/text/Degrees_of_freedom/index.html}.
+
+\bibitem{Ladon}
+Liina Ladon, ''Ideal and Real Gas Laws," Retrieved 11/8/2015.
+\url{http://pages.towson.edu/ladon/gases.html}.
+
+\bibitem{Nave}
+Carl R. Nave, ''HyperPhysics: Ideal Gas Law," Retreived 11/8/2015, \url{http://hyperphysics.phy-astr.gsu.edu/hbase/kinetic/idegas.html}.
+
+\bibitem{Brit}
+''Nikolaus August Otto". Encyclopædia Britannica. Encyclopædia Britannica Online.
+Encyclopædia Britannica Inc., 2015. Web. 08 Nov. 2015
+\url{http://www.britannica.com/biography/Nikolaus-August-Otto}.
+
+\bibitem{kw}
+Mickey Kutzner and Peter Wong, ''Ideal Gas Laws: Experiments for Physics, Chemistry and Engineering Science Using the Adiabatic Gas Law Apparatus," 2009.Physics Enterprises, Andrews University.  
+
+
+\end{thebibliography}
+
+%=====================================================
+%============ End ====================================
+%=====================================================
+
+\end{document}
+
+%=====================================================
+%============ End ====================================
+%============

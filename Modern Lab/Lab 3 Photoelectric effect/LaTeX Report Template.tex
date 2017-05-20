@@ -1,0 +1,252 @@
+%=====================================================
+%====== If you are new to LaTeX, this website ========
+%======     will be your new best friend:     ========
+%======   http://en.wikibooks.org/wiki/LaTeX  ========
+%======   Template created by Jonathan Blair  ========
+%=====================================================
+
+
+
+%=====================================================
+%============ Controls ===============================
+%=====================================================
+
+%\documentclass[12pt,letterpaper,onecolumn]{article}
+\documentclass[11pt,letterpaper,onecolumn]{article}
+%\documentclass[10pt,letterpaper,onecolumn]{article}  % not recommended
+%\documentclass[12pt,letterpaper,twocolumn]{article}
+%\documentclass[11pt,letterpaper,twocolumn]{article}
+%\documentclass[10pt,letterpaper,twocolumn]{article}
+
+
+%\usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{textgreek}
+\usepackage{float}
+%\graphicspath{{path-to-folder-containing-necessary-graphics}{other folder as necessary}}
+
+
+%=====================================================
+%============ \begin{document} =======================
+%=====================================================
+
+\begin{document}
+
+%=====================================================
+%============ Title ==================================
+%=====================================================
+
+\title{\bf The use of the Photoelectric effect to find $h/e$}
+%\title{\Large\bf Larger, Bolded Title}
+
+%=====================================================
+%============ Author =================================
+%=====================================================
+\author{
+ Jairo Portillo \\*
+  \\*
+ PHY 353L Modern Laboratory \\*
+ Department of Physics \\*
+ The University of Texas at Austin \\*
+ Austin, TX 78712, USA
+}
+\date{October 26, 2015}
+
+%\address{The University of Texas, Austin, Texas, 78712}
+
+\maketitle
+
+%=====================================================
+%============ Abstract ===============================
+%=====================================================
+
+\begin{abstract}
+
+Using a mercury lamp and different wavelength filters, we will illuminate a photo cathode inside a phototube with light in order to measure Plank's constant ($\frac{h}{e}$) and the work function. The photo cathode will also be illuminated of with light filtered with optical density filters. From this experiment we found $\frac{h}{e}$ to be 0.2141$\pm$0.4297$\times10^{-16}\frac{Js}{C}$ which is 50$\%$ from the accepted value of $4.1357\times10^{-15}\frac{Js}{C}$ and the work function to be 0.8199$\pm$0.2474 V. We also observed that the energy of the electron is dependent on the on the wavelength of the light rather than the intensity.
+
+\end{abstract}
+
+%=====================================================
+%============ Body of the article ==========================
+%=====================================================
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Introduction}
+
+\subsection{Physics Motivation}
+
+In 1887 Heinrich Rudolf Hertz found that when ultraviolet light shined on two metal electrodes with a voltage applied across them, the light altered the voltage at which sparking took place. Joseph John Thomson showed that the alteration in the voltage was simply due to the light "pushing" on the electron. In 1902, Philipp Lenard clarified the relation between light and electricity by demonstrating that electrically charged particles are released from a metal surface when it is exposed to light. This phenomenon raised the question of the particle-wave duality of light as it could not be explained by classical physics which considers light to be a electromagnetic wave.~\cite{PE}
+
+\subsection{Theoretical background}
+
+The primary objective of this experiment is to demonstrate the photoelectric effect but finding and using the stopping potential in order to confirm the wave nature of light. Using:
+$$E_{photon}=E_k+\Phi{}$$,
+where $E_{photon}$ is the energy of the photon, e is the electron charge, $E_k$ is the maximum kinetic energy of the electron, and $\Phi{}$ is the work function. The energies are defined as:
+$$E_{photon}=hv \text{, and } E_k=e|V_s|$$
+where h is Plank's constant, v is the frequency, e is the charge of the electron, and $V_s$ is stopping potential. Substituting the energies yields:
+$$hv=e|V_s|+\Phi{}$$
+With the deBeoglie relations, it can bee seen that the photons have momentum which gets transferred to the charged particles, or electrons in our case. The electron gains energy from the photon. As the photon moved through the metal, its kinetic energy would diminish by the work function, which is the energy required for the electron to escape the metal.
+The photoelectric effect is one phenomena of light that can only be explained with the particle nature of light, as the intensity of light does not change the kinetic energy of the electrons and that shorter wave length of light emit electrons with higher kinetic energy than that of high intensity low wavelength of light.~\cite{Nave}
+
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Our Approach \& Experimental setup}
+
+\subsection{Apparatus}
+
+
+%=====================================================
+%============ Importing pictures  ==========================
+%=====================================================
+
+% !! To be imported, all graphics must be converted !!
+% !!    to encapsulated postscript (.eps format)    !!
+% !!  The GNU Image Manipulation Program (GIMP) is  !!
+% !!          capable of this conversion.           !!
+
+\begin{figure}[H]
+  %
+  % placement specifier = { h,t,b,p,!,H }
+  % see the following url for placement specifier definitions:
+  % http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+  %
+ \begin{center}
+ \includegraphics*[scale = .6]{Apperatus.png}
+ \caption{Schematic for Photoelectric effect\label{fig:app} }
+ % See http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+ %  for information on labels.
+ \end{center}
+\end{figure}
+
+In this experiment, we will use a Hg lamp and filters to alter the wavelength of the light which will be emitted to a photoemissive metal inside a RCA 935 vacuum phototube. The power supply (PS) and the voltmeter are connected and controlled by the computer on a LabView program. The power supply controls the potential difference in the phototube which act equivalently to two plates. This potential difference is varied from -9 V to +9 V. The phototube had and thin photoemissive metal rod partially surrounded by a partial cylinder inside a vacuum. In order to test multiple wavelengths, different filter that fall within the spectral lines of Hg are used. Data is collected through the LabView program. The Hg Lamp emits photons which pass through filters of varying wavelength. The photons then illuminate the cathode in the phototube which emits electrons rapidly after the potential difference surpasses the stopping potential. 
+
+\subsection{Data Collection}
+
+ To record data we used the LabView program that was already written. The program recorded data as a plot of voltage and current. The voltage or potential across the phototube is what was altered and the current measured is the flow or emission of any electrons. Before any data was taken we used one filter to determine a good range for recording data. We did this by playing around with the program and finding the general point where the stopping voltage would be. we then determined a range from -3 V to 7 V and an interval of .05 Volts for our measurements would suffice. The filters used were 254, 365, 465-485, 545-555, 548-557, 580-590, and blue (450-495) all of which are in nanometers. For each filter, we took multiple measurements all within the same range and with the same interval. This would allow for enough data to determine our error.
+ 
+ After taking data with each filter, we then used the 545-555 nm filter and used it with varying optical density filters. This would show us if the effect was due to the classical or quantum phenomena. 
+ 
+ \begin{figure}[H]
+  %
+  % placement specifier = { h,t,b,p,!,H }
+  % see the following url for placement specifier definitions:
+  % http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+  %
+ \begin{center}
+ \includegraphics*[scale = .6]{ODplot.pdf}
+ \caption{An example of what out data looked like. This is the plot of varying optical filters for 545-55 nm filter.\label{fig:OD} }
+ % See http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+ %  for information on labels.
+ \end{center}
+\end{figure}
+ 
+ 
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+
+\section{Data Analysis and Results}
+
+\subsection{Data Processing and Analysis}
+
+For each of the filters, we took 4 sets of data. This was done as at a closer look of the data points there were oscillations but compares to the overall data they were obsolete. With the 4 data sets, we found average point and used that to find the respective errors.   
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+ \hline
+ Wavelength (nm) & Stopping Poterntial (V) \\ \hline
+ 254 & 0.9597$\pm$0.303 \\
+ 365 & 1.4018$\pm$0.304 \\
+ 465-485 & 0.8054$\pm$0.304 \\
+ 450-490 (Blue) & 0.9597$\pm$0.303 \\
+ 545-555 & 0.7968$\pm$0.209\\
+ 548-557 & 0.7992$\pm$0.213 \\
+ 580-590 & 0.8548$\pm$0.223\\
+ \hline
+
+\end{tabular}
+\caption{Voltage to Wavelength}
+\label{tab:data}
+\end{table}
+
+These point were used to find the work function and $\frac{h}{e}$ using the equation:
+$$|V_s|=\frac{h}{e}\frac{c}{\lambda}+\frac{\Phi{}}{e}$$
+we the frequancy is substituted as $v=\frac{c}{\lambda}$ where c is the speed of light and $\lambda$ is the wavelength. For the filters that had a range of wavelengths, we simple found the median and place errors on them. For example, for the blue filter which has a wavelength range of 450-490 nm, we rewrote it as 472.5$\pm$22.5 nm to simplify our calculations. 
+
+In order to find the stopping voltage for each of our plots, we found linear fits of the portion of the data before the current rapidly increased and after the current rapidly increased. The intercept of these two lines would be our accepted values of the stopping potentials as seen in Table~\ref{tab:data}. This was deemed the most effective was to find the stopping potential as it is a common practice for this experiment and partially removes the time and effort sifting through the data. Though this still occurs in order to determine which points will be the separating point between the two fits. 
+
+
+\begin{figure}[H]
+  %
+  % placement specifier = { h,t,b,p,!,H }
+  % see the following url for placement specifier definitions:
+  % http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+  %
+ \begin{center}
+ \includegraphics*[scale = .6]{VtoF.pdf}
+ \caption{Plot of the photoelectric effect we observed with our data and fit line.~\label{fig:results} }
+ \end{center}
+\end{figure}
+
+After plotting the data, we found a linear fit, which returned:
+$$y = (0.2141\pm0.4297) x - (0.8199\pm0.2427)$$
+It is seen in Figure~\ref{fig:results} that at high frequencies our data points are out of place. This is attributed to the accuracy of the phototube as it has a wavelength of maximum response of 3400$\pm$500 \AA which is 8.823$\pm$1.298$\times10^{14}$ Hz, even though Hg has spectral lines at those wavelengths~\cite{Hof}.
+
+For Figure~\ref{fig:OD}, this was a plot of data for the 545-555nm filter with difference Optical Density filters. The higher the optical density the more opaque the filters are. For this plot we, only ran it once each in order to observe the behavior the photon and electron would emit, so no in depth analysis was done except for the error in current. 
+
+For better data, the interval around the potential stopping voltage could have been made narrower and the interval between the voltages could have been made much smaller as the program wielded such capabilities. Data could also have been improved if some of the filters did not have electrical tape holding the lens in place and had the original screws. As we saw while working with the optical filters the electrical tape did block some photons but was not a huge set back as intensity does not affect the kinetic energy of the electron. 
+
+\subsection{Results and Brief Discussion}
+
+Based on our data and fit in Figure~\ref{fig:results}, we found that our slope or ration for $\frac{h}{e}$ was 0.2141$\pm$0.4297$\times10^{-16}\frac{Js}{C}$ which is 50$\%$ from the accepted value of $4.1357\times10^{-15}\frac{Js}{C}$ and the work function ($\frac{\Phi{}}{e}$) we found to be 0.8199$\pm$0.2474 V. Though we have a large margin of error compared to the accepted value we still observed the particle nature of the photon. From Figure~\ref{fig:OD}, we can see that as the optical density increases the amount of electrons decreases. This confirms that light can behave as a particle as the energy of the electron is not dependent on the intensity of the light but rather the wavelength of the light. As we can see from the relation as the wavelength decreases, the electron energy increases.   
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Summary and conclusions}
+
+Our value of $\frac{h}{e}  = 0.2141\pm0.4297\frac{Js}{C} $ is 50$\%$ from the accepted value of $4.1357\times10^{-15}\frac{Js}{C}$ and we found a work function of the photoemissive metal in the phototube to be 0.8199$\pm$0.2474 V. With the use of the optical density filter, we were able to observe how the energy of the electron is not dependent on the intensity of the light but rather the wave length of the light. Therefore, we were able to observe and confirm the particle nature of light.
+
+%=====================================================
+%============ Bibliography  ==============================
+%=====================================================
+
+\begin{thebibliography}{9}
+
+
+\bibitem{Nave}
+Carl R. Nave, ''HyperPhysics: Photoelectric effect," Retreived 10/23/2015, \url{http://hyperphysics.phy-astr.gsu.edu/hbase/mod1.html#c2}.
+
+\bibitem{Hof}
+Hofstra Group, ''RCA 935 Vacuum Phototube Side-On S-5 Response," Retrieved 10/24/2015, \url{https://www.hofstragroup.com/product/rca-935-vacuum-phototube-side-on-s-5-response/}.
+
+\bibitem{PE}
+ ''Photoelectric Effect". Encyclopædia Britannica. Encyclopædia Britannica Online.
+Encyclopædia Britannica Inc., 2015. Web. 23 Oct. 2015
+\url{http://www.britannica.com/science/photoelectric-effect}.
+
+\bibitem{PN}
+''Photoelectric effect," PhysicsNet.co.uk, Retrieved 10/24/15, \url{http://physicsnet.co.uk/a-level-physics-as-a2/electromagnetic-radiation-quantum-phenomena/photoelectric-effect/}
+
+\end{thebibliography}
+
+%=====================================================
+%============ End ====================================
+%=====================================================
+
+\end{document}
+
+%=====================================================
+%============ End ====================================
+%=====================================================

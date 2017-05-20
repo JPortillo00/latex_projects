@@ -1,0 +1,230 @@
+%=====================================================
+%====== If you are new to LaTeX, this website ========
+%======     will be your new best friend:     ========
+%======   http://en.wikibooks.org/wiki/LaTeX  ========
+%======   Template created by Jonathan Blair  ========
+%=====================================================
+
+
+
+%=====================================================
+%============ Controls ===============================
+%=====================================================
+
+%\documentclass[12pt,letterpaper,onecolumn]{article}
+\documentclass[11pt,letterpaper,onecolumn]{article}
+%\documentclass[10pt,letterpaper,onecolumn]{article}  % not recommended
+%\documentclass[12pt,letterpaper,twocolumn]{article}
+%\documentclass[11pt,letterpaper,twocolumn]{article}
+%\documentclass[10pt,letterpaper,twocolumn]{article}
+
+
+%\usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{textgreek}
+\usepackage{float}
+%\graphicspath{{path-to-folder-containing-necessary-graphics}{other folder as necessary}}
+
+
+%=====================================================
+%============ \begin{document} =======================
+%=====================================================
+
+\begin{document}
+
+%=====================================================
+%============ Title ==================================
+%=====================================================
+
+\title{\bf Measuring the Half Life of Barium 137}
+%\title{\Large\bf Larger, Bolded Title}
+
+%=====================================================
+%============ Author =================================
+%=====================================================
+\author{
+ Jairo Portillo \\*
+  \\*
+ PHY 353L Modern Laboratory \\*
+ Department of Physics \\*
+ The University of Texas at Austin \\*
+ Austin, TX 78712, USA
+}
+\date{November 23, 2015}
+
+%\address{The University of Texas, Austin, Texas, 78712}
+
+\maketitle
+
+%=====================================================
+%============ Abstract ===============================
+%=====================================================
+
+\begin{abstract}
+
+Using scintillator detectors and a coincidence circuit, we were able to measure the emission of gamma rays from a decaying Ba$^{137}$. With our data we obtained $(8.703\pm.344)\times10^{-3} \text{ s}^{-1}$ for the decay rate and  $125.6\pm4.51$ for the initial count. Our calculated is $49\%$ of the accepted value of the decay rate of $4.443$ for Ba$^{137}$.
+
+
+\end{abstract}
+
+%=====================================================
+%============ Body of the article ==========================
+%=====================================================
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Introduction}
+
+\subsection{Physics Motivation}
+
+In 1896, Henri Becquerel was studying the properties of x-rays by placing potassium uranyl sulfate to sunlight and then placing it in photographic plates wrapped in black paper. He believed that uranium had absorbed the sun's energy and then emitted x-rays. An overcast in Paris ruined his experiment, but he went along with it anyways and found that the uranium emitted radiation without an external source. In 1902, Sir Ernest Rutherford worked with Frederick Soddy to identify radioactive half life and formulate the accepted explanation of radioactivity.
+The half life of an element allows the carbon dating of organic material which allows us to date thing from as far as 40,000 year ago.~\cite{ERP,NDT} 
+  
+\subsection{Theoretical background}
+
+The change in the number of undecayed nuclei $\Delta$N is proportional to the number of undecayed nuclei N and the time $\Delta$t in which the time takes place.
+Thus yielding,
+
+$$\Delta\text{N} = -\lambda\text{N}\Delta\text{t}$$
+
+where $\lambda$ is the decay rate. We can use infinitesimal changes to form the differential equation of the decay
+
+$$\frac{d\text{N}}{d\text{t}}= -\lambda\text{N$$}$$
+
+With the solution being
+
+$$\text{N} = \text{N}_0e^{-\lambda\text{t}}$$
+
+We can rewrite this as
+
+$$\text{A} = \text{A}_0e^{-\lambda\text{t}}$$
+
+where A is the activity of the sample this is proportional to $\lambda\text{N}$ and $\text{A}_0$ is proportional to $\lambda\text{N}_0$  
+For the half life we know that as some $\text{t}=\tau$ that $\text{A}=\frac{1}{2}\text{A}_0$ with this we find that the half life is 
+
+$$\tau = \frac{\ln{2}}{\lambda} = \frac{0.693}{\lambda}$$ ~\cite{Parks}
+
+In this experiment with Ba$^{137}$, we will measure the gamma decay. Gamma decay is typically a product of alpha or beta decay, as we are not using any other nuclear process. Gamma decay includes gamma emission and two electromagnetic processes, internal conversion and internal pair productions. Internal conversion is when excess energy in the nucleus is directly transferred to its own orbiting electrons thus ejecting the electron. Internal pair conversion is where excess energy in the electric field of the nucleus is directly converted into an electron and positron which are emitted together. Gamma emission is where gamma rays are emitted and is the form of decay in this experiment.~\cite{Brit}
+
+
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Our Approach \& Experimental setup}
+
+\subsection{Apparatus}
+
+
+%=====================================================
+%============ Importing pictures  ==========================
+%=====================================================
+
+% !! To be imported, all graphics must be converted !!
+% !!    to encapsulated postscript (.eps format)    !!
+% !!  The GNU Image Manipulation Program (GIMP) is  !!
+% !!          capable of this conversion.           !!
+
+
+
+In this experiment, we will use the ORTEC scintillator to record the counts of the decay.The scintillator act as a trigger which are set off each time a gamma ray passed through. However it is possible for multiple gamma rays from different events to pass through creating a false signal. In order to eliminate false signals, the signals are passed through a coincidence circuit. It first passes through a linear amplifier which adds more power to the load. After passing through the amplifier the signal is passed into the Single Channel Analyzer (SCA) which determines whether or not a signal falls within a specific energy range. The SCA has two dials, one labeled E which determines the minimum energy, which for us was at 362, and the other labeled $\Delta$E which determines the range of the energies that give and output signal, which for us was 1. Using an oscilloscope, we were able to first focus the scintillator to find the desire frequency and minimize any fluctuations. We found the desired signal but using the solid Cs$^137$/Ba$^137$ found in the lab before using the Ba$^137$ that was filtered using a solution of $0.9\%$ NaCl in 0.04M HCl from the parent isotope Cs$^137$. ~\cite{HL,GGC}
+
+\subsection{Data Collection}
+
+\begin{figure}[H]
+  %
+  % placement specifier = { h,t,b,p,!,H }
+  % see the following url for placement specifier definitions:
+  % http://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
+  %
+ \begin{center}
+ \includegraphics*[scale = .6]{count.pdf}
+ \caption{An example of what out data looked like. This is the plot of carbon dioxide for multiple trials.\label{fig:Counts} }
+ % See http://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing
+ %  for information on labels.
+ \end{center}
+\end{figure}
+ 
+
+ To record data we used the program LabView with a pre-written program that recorded the counts. For each trial we prepared a new sample in order to refresh the counts. We remained as consistent as possible with the amount of drops on the solution however at times when the sample was place between the scintillator some of the sample would be spilled which influenced the magnitude of the counts. There was a brief period where even with a fresh sample, the counts were very low. This was resolved with changing the plate the sample was on, as to why this worked it is unknown but it may have been equipment failure somewhere in the circuit that resolved itself. The LabView program was set to measure counts every two seconds for six minutes. A two second interval between counts was chosen due to the limitations of the computer and at smaller intervals the data appeared as noise. This was done ten times due to the inconsistencies in the magnitude of the counts. Noise was also recorded as the counts were not taken in a shielded environment. As seen in Figure \ref{fig:Counts} a six minute interval was insufficient for an accurate reading for the half life.   
+  
+ 
+ 
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+
+\section{Data Analysis and Results}
+
+\subsection{Data Processing and Analysis}
+
+With the ten measurements, we averaged them for the analysis and subtracted the average noise from it. The estimated error in our count measurements are $\pm9.008$. In order to find the decay rate $\lambda$, we rearrange the exponential to a linear equation
+$$\ln{\text{N}}=\ln{\text{N}_0}-\lambda\text{t}$$
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics*[scale = .6]{LogCnt.pdf}
+\caption{Plot of one the runs with error bars.~\label{fig:results} }
+\end{center}
+\end{figure}
+
+The data did experience fluctuations in the counts. In order to filter the data the smooth function in Matlab was used to reduce the fluctuations after data recording. The smooth function in Matlab uses a moving average to find the points. This gives us the data point in Figure \ref{fig:Counts}. After the data was filtered, We were then able to fit our data to the the linear equation which yields to $(8.703\pm.344)\times10^{-3} \text{ s}^{-1}$ for the decay rate $\lambda$ and $4.833\pm0.0359$ for $\ln{\text{N}_0}$. We were able to get a fairly straight line as the data does not deviate much from the fit as seen in Figure \ref{fig:results}. Using these values we find that the half life for our data is $79.6\pm3.14$ s and the initial count $\text{N}_0$ to be $125.6\pm4.51$. 
+
+\subsection{Results and Brief Discussion}
+
+The accepted value for the half life of $\text{Ba}^{137}$ is 156 s. Our calculated is $49\%$ of the accepted value. Our value was far off due to the lack of the horizontal asymptote expected from the decay curve. This was lacking as we did not use a sufficient time interval to record the counts. We used a window of 360 seconds when the accepted half life was 156 seconds, a better window would have been at least 600 seconds. This would have aloud a more data to give a better fit as the asymptote would have given a more definite curve.  
+
+
+%=====================================================
+%============ Section ==================================
+%=====================================================
+
+\section{Summary and conclusions}
+
+We were able to measure the emission of gamma rays from a decaying Ba$^{137}$. With our data we obtained $(8.703\pm.344)\times10^{-3} \text{ s}^{-1}$ for the decay rate and  $125.6\pm4.51$ for the initial count. Our calculated is $49\%$ of the accepted value of the decay rate of $4.443$ for Ba$^{137}$. We established found the our value was off due to the lack of the asymptotic behavior expected from the decay which came from a small time window for data collection.
+
+%=====================================================
+%============ Bibliography  ==============================
+%=====================================================
+
+\begin{thebibliography}{9}
+
+\bibitem{ERP}
+Earl R. Paul, ''Sir Ernest Rutherford," 1997. Michigan Tech University. Retrieved 11/22/2015.\url{http://chemistry.mtu.edu/~pcharles/SCIHISTORY/Rutherford.html}.
+
+\bibitem{HL}
+''Lifetime of $^137$Ba," Modern Lab at The University of Texas. Retrieved 11/9/2015. \url{https://web2.ph.utexas.edu/~phy353l/lab/halflife/Ba137_Lifetime.html}.
+
+\bibitem{GGC}
+''Gamma Gamma Coincidence," Modern Lab at The University of Texas. Retrieved 11/20/2015.
+\url{https://web2.ph.utexas.edu/~phy353l/lab/gammagamma/gammagamma.html}.
+
+\bibitem{NDT}
+''Radioactive Half-Life," Nondestructive Testing Resource Center. Retreived 11/22/2015, \url{http://hyperphysics.phy-astr.gsu.edu/hbase/kinetic/idegas.html}.
+
+\bibitem{Brit}
+''Gamma Decay". Encyclopædia Britannica. Encyclopædia Britannica Online.
+Encyclopædia Britannica Inc., 2015. Web. 22 Nov. 2015
+\url{http://www.britannica.com/science/gamma-decay}.
+
+\bibitem{Parks}
+James E. Parks, ''Radioactive Half-Life of Barium-137m," 2001. Department of Physics and Astronomy, University of Tennessee. \url{http://www.phys.utk.edu/labs/modphys/radioactivehalflife.pdf}  
+
+
+\end{thebibliography}
+
+%=====================================================
+%============ End ====================================
+%=====================================================
+
+\end{document}
+
+%=====================================================
+%============ End ====================================
+%============
